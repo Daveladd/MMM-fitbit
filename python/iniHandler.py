@@ -123,7 +123,7 @@ def WriteTokens(AccToken,RefToken,Expires=None):
 		tokenParser.set('Tokens','REF_TOK',RefToken.decode('utf-8'))
 		tokenParser.set('Tokens','ACC_TOK',AccToken.decode('utf-8'))
 		if Expires:
-			tokenParser.set('Tokens','EXPIRES_AT',Expires.decode('utf-8'))
+			tokenParser.set('Tokens','EXPIRES_AT',str(Expires).decode('utf-8'))
 		with open(iniDirectory + tokensFile, 'w') as iniFile:
 			tokenParser.write(iniFile)
 	except ConfigParser.NoSectionError:
