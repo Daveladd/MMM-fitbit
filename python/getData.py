@@ -28,7 +28,7 @@ if __name__ == "__main__":
 		RefreshToken = token['refresh_token']
 		ExpiresAt = token['expires_at']
 		print_data(token,0,1)
-		WriteTokens(AccessToken.encode('utf-8'), RefreshToken.encode('utf-8'), str(ExpiresAt).encode('utf-8'))
+		WriteTokens(AccessToken.encode('utf-8'), RefreshToken.encode('utf-8'), ExpiresAt)
 		return token
 	def WriteTokenWrapper(token):
 		print_data(token,0,1)
